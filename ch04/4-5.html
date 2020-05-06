@@ -26,7 +26,7 @@
            - 위치이동 속성(left, right, top, bottom)으로 자유롭게 위치 설정
            - 브라우저 스크롤을 이동해도 화면에 고정
         */
-        
+
         section {
             display: inline-block;
             width: 200px;
@@ -103,6 +103,70 @@
         section:nth-of-type(4) > div:nth-of-type(2) {right: 20px; top: 20px;}
         section:nth-of-type(4) > div:nth-of-type(3) {right: 30px; top: 30px;}
 
+        /* z-index 속성 */
+        .box1 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .box1 > div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+            /* z-index는 숫자가 큰 순서대로 위로 올라온다.*/
+        .box1 > div:nth-child(1) {background: red  ; left: 10px; top: 10px; z-index: 3;}
+        .box1 > div:nth-child(2) {background: green; left: 20px; top: 20px; z-index: 2;}
+        .box1 > div:nth-child(3) {background: blue ; left: 30px; top: 30px; z-index: 1;}
+
+        /* 부모자식 위치관계 설정*/
+        .box2 {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .box2 > div {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .box2 > div > div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .box2 > div > div:nth-child(1) {background: red  ; right: 10px; bottom: 10px;}
+        .box2 > div > div:nth-child(2) {background: green; right: 20px; bottom: 20px;}
+        .box2 > div > div:nth-child(3) {background: blue ; right: 30px; bottom: 30px;}
+
+        /* overflow 속성 */
+        .box3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        .box3-1 {overflow: visible;}
+        .box3-2 {overflow: scroll;}
+        .box3-3 {overflow: hidden;}
+    
+        .box3 > div {
+            width: 100px;
+            height: 300px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .box3-1 > div {background: red;}
+        .box3-2 > div {background: green;}
+        .box3-3 > div {background: blue;}
 
     </style>
 </head>
@@ -134,10 +198,34 @@
         <div></div>
         <div></div>
     </section>
-    <h4>2)z-index 속성</h4>
-    <h4>3)부모, 자식, 위치관계 설정</h4>
-    <h4>4)overflow 속성</h4>
 
+    <h4>2)z-index 속성</h4>
+    <div class="box1">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h4>3)부모, 자식, 위치관계 설정</h4>
+    <div class="box2">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <h4>4)overflow 속성</h4>
+    <div class="box3 box3-1">
+        <div></div>
+    </div>
+    <div class="box3 box3-2">
+        <div></div>
+    </div>
+    <div class="box3 box3-3">
+        <div></div>
+    </div>
 
 </body>
 </html>
