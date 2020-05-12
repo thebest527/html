@@ -1,0 +1,13 @@
+게시판 프로젝트 화면구성
+
+회원
+- 로그인 : http://chhak.kr/board/user/login.html
+- 약관 : http://chhak.kr/board/user/terms.html
+- 가입 : http://chhak.kr/board/user/register.html
+
+게시판
+- 글목록 : http://chhak.kr/board/list.html
+- 글쓰기 : http://chhak.kr/board/white.html
+- 글보기 : http://chhak.kr/board/view.html
+- 글수정 : http://chhak.kr/board/modify.html
+
