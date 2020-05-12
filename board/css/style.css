@@ -245,7 +245,7 @@ body {}
 #board.list > article > table tr {}
 #board.list > article > table tr > th {}
 #board.list > article > table tr > td {}
-#board.list > article > table tr > td:nth-child(1) {width:  50px; text-align: center;}
+#board.list > article > table tr > td:nth-child(1) {width:  50px; text-align: center; background: #fff;}
 #board.list > article > table tr > td:nth-child(2) {width:  auto; text-align: left;}
 #board.list > article > table tr > td:nth-child(3) {width: 100px; text-align: center;}
 #board.list > article > table tr > td:nth-child(4) {width: 100px; text-align: center;}
@@ -283,3 +283,7 @@ body {}
 }
 
 /* 게시판-글수정 */
+#board.modify {}
+#board.modify form > div {
+    margin-top: 10px;
+    text-align: right;
